@@ -19,5 +19,18 @@ function createGrid(size) {
   }
 }
 
+document.getElementById('resize-button').addEventListener('click', () => {
+  let newSize = parseInt(prompt("Enter new grid size (max 100):"));
+
+  // Validate input
+  if (isNaN(newSize) || newSize < 1 || newSize > 100) {
+    alert("Please enter a valid number between 1 and 100.");
+    return;
+  }
+
+  createGrid(newSize);
+});
+
+
 // Create default 16x16 grid on page load
 createGrid(16);
