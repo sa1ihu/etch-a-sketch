@@ -1,0 +1,16 @@
+#container {
+  display: flex;
+  flex-wrap: wrap;
+  width: 960px;
+  height: 960px;
+  border: 2px solid #333;
+  margin: 20px auto;
+}
+.square {
+  flex: 0 0 auto;
+  width: 60px;  /* 960 / 16 */
+  height: 60px;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  transition: background-color 0.2s;
+}
