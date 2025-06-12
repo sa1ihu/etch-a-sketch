@@ -12,7 +12,12 @@ function createGrid(size) {
 
     // Add hover effect
     square.addEventListener('mouseenter', () => {
-    square.style.backgroundColor = '#333';
+    square.style.backgroundColor = `rgb(${randomRGB()}, ${randomRGB()}, ${randomRGB()})`;
+
+function randomRGB() {
+  return Math.floor(Math.random() * 256); // 0–255
+}
+
   });
 
     container.appendChild(square);
